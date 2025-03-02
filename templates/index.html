@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'style.css')}}">
+</head>
+<body>
+    <div id="main">
+
+        <div id="header">
+            
+            <div id="logo">
+                <img  src="{{url_for('static',filename = 'colorful-bird-illustration-gradient_343694-1741.avif')}}">
+            </div>
+
+
+            <div id="name">
+                <h1 id="green">F</h1>
+                <h1 id = "purple">N</h1>
+                <h1 id = "orange">D</h1>
+            </div>
+
+            <div class="contact">
+                <u>About</u>
+            </div>
+            <div class="contact">
+                <u>Contact Us</u>
+            </div>
+
+        </div>
+        <div id="fakeheader"></div>
+        <div id="page">
+            <h1>FAKE NEWS DETECTOR</h1>
+            <form action="/predict" method = post>
+                <label for="news">Enter the news:</label><br>
+                <input type="text" id="news" name="news" value=""><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
